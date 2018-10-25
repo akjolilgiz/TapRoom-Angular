@@ -1,0 +1,14 @@
+
+  <h3>Add a Tap</h3>
+  <label>Enter Tap Title:</label>
+  <input #newTitle>
+  <label>Enter Tap Brand:</label>
+  <input #newBrand>
+  <label>Enter Tap Price:</label>
+  <input #newPrice>
+  <label>Enter Tap Content:</label>
+  <input #newContent>
+  <label>Enter Tap Flavor:</label>
+  <input #newFlavor>
+  <button (click)="doneAdding(newTitle.value, newBrand.value, newPrice.value, newContent.value, newFlavor.value); newTitle.value='';">Done</button>
+  <br>

@@ -1,0 +1,15 @@
+<div *ngIf="childSelectedTap" class="edit">
+  <h3>Edit Tap</h3>
+  <label>Enter Tap Title:</label>
+  <input [(ngModel)]="childSelectedTap.title">
+  <label>Enter Tap Brand:</label>
+  <input [(ngModel)]="childSelectedTap.brand">
+  <label>Enter Tap Price:</label>
+  <input [(ngModel)]="childSelectedTap.price">
+  <label>Enter Tap Content:</label>
+  <input [(ngModel)]="childSelectedTap.content">
+  <label>Enter Tap Flavor:</label>
+  <input [(ngModel)]="childSelectedTap.flavor">
+  <button (click)="finishedEditing()">Done</button>
+  <br>
+</div>

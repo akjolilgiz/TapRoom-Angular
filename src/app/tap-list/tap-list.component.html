@@ -1,0 +1,26 @@
+<select (change)="onChange($event.target.value)">
+  <option value="allTaps" selected="selected">All Taps</option>
+  <option value="completedTaps">Sale Taps</option>
+  <option value="incompleteTaps">Not Sale Taps</option>
+</select>
+
+
+<div *ngFor="let currentTap of childTapList | completeness:filterByCompleteness" class="keg">
+  <div class="title"> {{currentTap.title}}</div>
+  <p> Brand: {{currentTap.brand}}</p>
+  <div [class]="priceColor(currentTap)">Price: {{currentTap.price}}$ </div>
+  <p>Alcohol content: {{currentTap.content}}%</p>
+  <p>Flavor: {{currentTap.flavor}}</p>
+  <div [class]="pintColor(currentTap)">Pints: {{currentTap.pint}}</div>
+  <input *ngIf="currentTap.done === true" type="checkbox" checked (click)="toggleDone(currentTap, false)"/>
+  <input *ngIf="currentTap.done === false" type="checkbox" (click)="toggleDone(currentTap, true)"/>
+  <button (click)="editButtonClicked(currentTap)">Edit!</button>
+  <hr>
+  <button (click)="editButtonClicked(currentTap)" class="btn btn-primary">Edit</button>
+  <button (click)="sellTap(currentTap)"  class="btn btn-primary">Sell a pint</button>
+  <button (click)="sellGrowler(currentTap)"  class="btn btn-primary">Sell a Growler</button>
+  <button (click)="sellBigGrowler(currentTap)"  class="btn btn-primary">Sell Big Growler</button>
+  <button (click)="fillTap(currentTap)"  class="btn btn-primary">Fill UP</button>
+  <button (click)="delete(currentTap)"  class="btn btn-primary">Delete</button>
+  <button (click)="sale(currentTap)"  class="btn btn-primary" >Sale</button>
+</div>
