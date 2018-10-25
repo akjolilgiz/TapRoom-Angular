@@ -6,6 +6,7 @@ import { TapListComponent } from './tap-list/tap-list.component';
 import { EditTapComponent } from './edit-tap/edit-tap.component';
 import { NewTapComponent } from './new-tap/new-tap.component';
 import { CompletenessPipe } from './completeness.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CompletenessPipe } from './completeness.pipe';
     TapListComponent,
     EditTapComponent,
     NewTapComponent,
-    CompletenessPipe
+    CompletenessPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

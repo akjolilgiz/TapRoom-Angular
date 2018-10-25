@@ -4,10 +4,11 @@
       Welcome to {{ title }}!
     </h1>
   </div>
+  <app-navbar></app-navbar>
+
   <app-tap-list [childTapList]="masterTapList" (clickSender)="editTap($event)"></app-tap-list>
   <app-edit-tap [childSelectedTap]="selectedTap" (clickedDone)="finishEdit()"></app-edit-tap>
   <app-new-tap (sendTap)="addTap($event)"></app-new-tap>
-
 
 
 

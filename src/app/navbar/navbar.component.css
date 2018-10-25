@@ -1,0 +1,24 @@
+.nav {
+    margin-left: auto;
+}
+nav {
+    margin-left: auto;
+    background-color: white;
+    color: black;
+}
+
+.nav-item {
+        margin-top:     10px;
+}
+
+.bg-light {
+        background: white;
+}
+
+.nav-cart {
+        border-left: 1px solid #ced4db;
+        margin-left: 20px;
+}
+.navbar-brand{
+  margin-top: 25px; 
+}
